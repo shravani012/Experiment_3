@@ -10,7 +10,7 @@
             </ul>
         </ul>
         <b>Screenshot:</b>
-        <img src="./images/1.png" alt="Student Registration Form Screenshot">
+        <img src="./images/student registration.PNG" alt="Student Registration Form Screenshot">
 
 <h2>✅ Problem Statement 2: DOM Manipulation & jQuery</h2>
         <ul>
@@ -23,10 +23,10 @@
         </ul>
          <b>Screenshot:</b>
          <h4> Before</h4>
-        <img src="./images/dom_previous.png" alt="DOM Manipulation Screenshot">
+        <img src="./images/dom_previous.PNG" alt="DOM Manipulation Screenshot">
         <h4> After</h4>
-        <img src="./images/dom_next.png" alt="DOM Manipulation Screenshot">
-        <img src="./images/dom_next1.png" alt="DOM Manipulation Screenshot">
+        <img src="./images/dom_next.PNG" alt="DOM Manipulation Screenshot">
+        <img src="./images/dom_next1.PNG" alt="DOM Manipulation Screenshot">
 
 <h2>✅ Problem Statement 3: Real-Time User Activity Tracker</h2>
         <ul>
