@@ -1,1 +1,74 @@
+<!-- student_registration.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            
+            <button type="submit">Register</button>
+        </form>
+        <p id="errorMessage"></p>
+    </div>
 
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let username = document.getElementById('username').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let phone = document.getElementById('phone').value.trim();
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirmPassword').value;
+            let errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = '';
+            
+            let emailPattern = /^[^\s@]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/;
+            let phonePattern = /^[0-9]{10}$/;
+            let passwordPattern = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[&$#@]).{7,}$/;
+            
+            if (!username || !email || !phone || !password || !confirmPassword) {
+                errorMessage.textContent = 'All fields are required';
+                return;
+            }
+            if (!emailPattern.test(email)) {
+                errorMessage.textContent = 'Invalid email format';
+                return;
+            }
+            if (!phonePattern.test(phone)) {
+                errorMessage.textContent = 'Phone number must be 10 digits';
+                return;
+            }
+            if (!passwordPattern.test(password)) {
+                errorMessage.textContent = 'Password must be at least 7 characters, contain one uppercase, one number, and one special character (&,$,#@)';
+                return;
+            }
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match';
+                return;
+            }
+            alert('Registration Successful');
+        });
+    </script>
+</body>
+</html>
