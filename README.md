@@ -35,6 +35,6 @@
         </ul>
         <b>Screenshot:</b>
         <h4>Page 1</h4>
-        <img src="./images/4.png" alt="User Activity Tracker Screenshot">
+        <img src="./images/previous.png" alt="User Activity Tracker Screenshot">
         <h4>Page 2</h4>
-        <img src="./images/5.png" alt="User Activity Tracker Screenshot">
+        <img src="./images/next.png" alt="User Activity Tracker Screenshot">
